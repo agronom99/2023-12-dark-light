@@ -1,0 +1,64 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: #fafafa;
+	height: 100vh;
+	margin: 0;
+	transition: transparent 0.2s linear;
+}
+body.dark {
+	background: #282931;
+}
+.checkbox {
+	opacity: 0;
+}
+.label {
+	margin-top: 15%;
+	margin-left: 48.5%;
+	background-color: #282931;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+body.dark .label{
+	background-color: #f2f2f2;
+}
+.label .ball {
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+body.dark .label .ball{
+	background-color: #282931;
+}
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.fa-moon {
+	color: #e9bb04;
+}
+.fa-sun {
+	color: #e48f06;
+}
+h1{
+	color: #282931;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body.dark h1 {
+	color: #f2f2f2;
+}
